@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <ul>
+        {% for feature, (predicted_label, confidence) in predictions.items() %}
+        <li>{{ feature.capitalize() }}: {{ predicted_label }} (Confidence: {{ confidence }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
